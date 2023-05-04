@@ -67,7 +67,8 @@ function setHeader(i) {
   let nameMonth = getMonth(true);
   let year = getYear();
   var dayWeek = getDayWeek(year,month,day)
-  //Por algum motivo ele precisa que alguma função chame o dayweek antes de executar. Por isso o console dela.
+  //Por algum motivo ele precisa fazer uma chamada na variável dayweek. Por isso o console dela.
+  //Não retirar, se não irá gerar um erro *(não faço a mais vaga ideia do porquê)*
   console.log(dayWeek);
   (SpreadsheetApp.getActiveSpreadsheet().getSheetByName(i).getRange(2,1).setValue(text()+dayWeek+day + nameMonth + ' DE ' + year));
   }

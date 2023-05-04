@@ -5,32 +5,29 @@
  * Email 1: davimatosc@hotmail.com
  * 
  * Email 2: davimc17@gmail.com
- * 
- * Tel: 98 9 8412-1438
+ * Linkedin: https://www.linkedin.com/in/davi-matos-carvalho/
  */
-  function setNewMonth() {
-    //CUIDADO PARA NÃO EXECUTAR A FUNÇÃO CLEANCELLS NO MEIO DO MÊS
-    //ABRIR APENAS QUANDO O MÊS VIRAR
-    //ATENÇÃO, VAI PERDER TUDO E NÃO HÁ POSSIBILIDADE DE DAR CTRL + Z
+  function createNewMonth() {
     for(i = 1; i<32;i++){
-
-      
       setHeader(i);
-      //setTotal(i);
-      //setPercentage(i);
+      setTotal(i);
+      setPercentage(i);
+
+      /**CUIDADO AO EXECUTAR O FORMATADOR FIQUE ATENTO À FUNÇÃO CLEANCELLS
+      *ATENÇÃO: TODOS OS CAMPOS DE VENDAS SERÃO LIMPOS*/
       //!!!!!!!!!!!!!!
-      /*//DANGER!!!!!!!!
+      //DANGER!!!!!!!!
       //you will lose all data
+    
+      cleanCells(i);
       
-      //cleanCells(i);
-      
-      //DANGER!!!!!!!!*/
+      /***DANGER!!!!!!!!***/
       //!!!!!!!!!!!!!!;
-      
+      console.log("Planilha atualizada.")
     }
     //!!!!!!!!!!!
 }
-  function insertLocal() {
+  function insertLocalHandler() {
     /*Warning: irá criar uma nova loja
       //insertLocal(
         i: indicie, 
@@ -41,12 +38,19 @@
       //insertLocal(i, 16,"GAIA CAFÉ OLHO DAGUA", false);
       //fim insert
   }
-  function insertNewPayment() {
+  function insertNewPaymentHandler() {
     /**
      * Warning, irá criar uma nova forma de pagamento
      * insertNewPaymentFormat(i:Integer(indíce) , col:Integer(coluna), name: String (nome da forma de pagamento))
      */
-    for(i = 1; i<32; i++)
-      isnertPaymentFormat(i, 7, "AMERICANAS",false)
+    //for(i = 1; i<32; i++)
+      //insertPaymentFormat(i, 7, "AMERICANAS",false)
       
+  }
+
+  function removePaymentHandler() {
+
+    //for(i = 1; i < 32; i++)
+      //removePaymentFormat(i, "AMERICANAS")
+
   }

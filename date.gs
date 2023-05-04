@@ -8,6 +8,7 @@ function getDay(i) {
   switch (month){
     case 1: 
     nameMonth=" DE JANEIRO";
+    break;
     case 2: 
     nameMonth=" DE FEVEREIRO";
     break;
@@ -42,6 +43,7 @@ function getDay(i) {
     nameMonth=" DE DEZEMBRO";
     break;
   }
+  console.log(nameMonth)
   return (txt==true? nameMonth:month);
 }
 
@@ -51,28 +53,29 @@ function getYear() {
 
 function getDayWeek(y,m,d) {
   /**
-   * 0 sexta
-   * 1 sábado
-   * 2 domingo
-   * 3 segunda
-   * 4 terça
-   * 5 quarta
-   * 6 quinta
+   * 0 quinta
+   * 1 sexta
+   * 2 sábado
+   * 3 domingo
+   * 4 segunda
+   * 5 terça
+   * 6 quarta
     */
   y = +y;
   m = +m;
   d = +d;
   
-  let day = new Date(y,m,d).getDay();
+  let day = new Date(y,m-1,d).getDay();
 
   switch (day){
-    case 0: return 'SEXTA-FEIRA ';
-    case 1: return 'SÁBADO ';
-    case 2: return 'DOMINGO ';
-    case 3: return 'SEGUNDA-FEIRA ';
-    case 4: return 'TERÇA-FEIRA ';
-    case 5: return 'QUARTA-FEIRA ';
-    case 6: return 'QUINTA-FEIRA ';
+    case 0: return 'DOMINGO ';
+    case 1: return 'SEGUNDA-FEIRA ';
+    case 2: return 'TERÇA-FEIRA ';
+    case 3: return 'QUARTA-FEIRA ';
+    case 4: return 'QUINTA-FEIRA ';
+    case 5: return 'SEXTA-FEIRA ';
+    case 6: return 'SÁBADO ';
   }
+  console.log(day);
 }
 
